@@ -1,4 +1,4 @@
-from twilio.rest import TwilioRestClient
+from twilio.rest import Client
 
 from st2common.runners.base_action import Action
 
@@ -6,7 +6,7 @@ from st2common.runners.base_action import Action
 class TwilioSendSMSAction(Action):
     def __init__(self, config):
         super(TwilioSendSMSAction, self).__init__(config=config)
-        self.client = TwilioRestClient(self.config['account_sid'],
+        self.client = Client(self.config['account_sid'],
                                        self.config['auth_token'])
 
     def run(self, from_number, to_number, body):
