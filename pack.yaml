@@ -2,7 +2,7 @@
 ref: twilio
 name : twilio
 description : st2 content pack containing twilio integrations
-version: 0.3.1
+version: 0.3.2
 python_versions:
   - "2"
   - "3"
